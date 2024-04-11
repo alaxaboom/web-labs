@@ -1,38 +1,23 @@
-import './App.css';
-import React, { useState } from 'react';
-function Task1() {
-  const [selectedCity, setSelectedCity] = useState('');
-
-  const handleCityChange = (event) => {
-    setSelectedCity(event.target.value);
-  };
-
+import React from 'react';
+import CitySelectComponent from './tasks/task1.1';
+import Calculator from './tasks/task1.2';
+import NumberConverter from './tasks/task1.3';
+import SecondsLivedCalculator from './tasks/task1.4';
+import NumberFilter from './tasks/task1.5';
+import RegistrationForm from './tasks/task2.1';
+import ProfileEditForm from './tasks/task2.2';
+const App = () => {
   return (
-    <div>
-      <select value={selectedCity} onChange={handleCityChange}>
-        <option value="rio">Рио-де-Жанейро</option>
-        <option value="other">Другой город</option>
-      </select>
-      {selectedCity !== 'rio' && <p>Нет, это не Рио-де-Жанейро!</p>}
-    </div>
-  );
-}
-function Task2(){
-  return <a>asdasdasda</a>
-}
-function App() {
-  return (
-    <div className="App" style={{ display: 'flex' }}>
-      <div style={{ flex: 1 }}>  
-      <Task1 />
-      </div>
-      <div style={{ flex: 1 }}>   
-      <Task2 />
-      </div>
-      
+    <div className='flex-container'>
+      <div className="flex-item"><CitySelectComponent /></div>
+      <div className="flex-item"><Calculator/></div>
+      <div className="flex-item"><NumberConverter/></div>
+      <div className="flex-item"><SecondsLivedCalculator/></div>
+      <div className="flex-item"><NumberFilter/></div>
+      <div className="flex-item"><RegistrationForm/></div>
+      <div className="flex-item"><ProfileEditForm/></div>
     </div>
   );
 }
 
 export default App;
-
