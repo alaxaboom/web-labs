@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+        function Square ({n}){
+            return <span>{n * n}</span>;
+        }
+        function OnlyEven({ arr }) {
+        const evenNumbers = arr.filter(num => num % 2 === 0);
+        return (
+        <span>
+            {evenNumbers.join(', ')}
+        </span>
+    );
+}
+        function Temperature({ t }) {
+        const temperatureStyle = {
+            color: t < 0 ? 'blue' : 'red'
+         };
+
+        return (
+             <span style={temperatureStyle}>
+                 {t}
+                </span>
+        );
+}
+        function App() {
+            return <><Square n={3} /> {' '}<OnlyEven arr={[14, 5, 6, 12, 21, 2]} />{' '}<Temperature t={451} /></>;
+        }
+        ReactDOM.render(<App/>, document.getElementById('root'));
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>
