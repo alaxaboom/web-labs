@@ -8,15 +8,11 @@ import Revert from './task5';
 const App = () => {
   return (
     <div className='flex-container'>
-      <Timer className='flex-item'/>
-      <div className='divider'></div>
-      <InfiniteTimer className='flex-item'/>
-      <div className='divider'></div>
-      <PrimeNumbers className='flex-item'/>
-      <div className='divider'></div>
-      <Svetofor className='flex-item'/>
-      <div className='divider'></div>
-      <Revert s="abcdefg" className='flex-item'/>
+      <div  className='flex-item'><Timer/></div>
+      <div className='flex-item'> <InfiniteTimer /></div>
+      <div className='flex-item'><PrimeNumbers/></div>
+      <div className='flex-item'><Svetofor/></div>
+      <div className='flex-item'><Revert/></div>
     </div>
   );
 }
